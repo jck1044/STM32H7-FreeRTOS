@@ -24,7 +24,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <../../../../Ref/Top/Main.hpp>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -134,7 +133,6 @@ PUTCHAR_PROTOTYPE
   return ch;
 }
 
-int fsw_main();
 /* USER CODE END 0 */
 
 /**
@@ -213,14 +211,11 @@ int main(void)
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
-  int ret = fsw_main();
-  if (ret == 5) {
   for (int i = 0; i < 20; i++)
   {
 //    printf("\n\rXXXXX2\n\r");
 //    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6);
 //    HAL_Delay(500);
-  }
   }
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
